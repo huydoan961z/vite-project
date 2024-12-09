@@ -5,10 +5,19 @@ import ReactLogo from './assets/react.svg'
 import { useState } from 'react'
 
 const App = () => {
-  const huydoan = "deptrai"
+  const huydoan = "hi there"
   const age = 25;
+  // const testFunction = (name) => {
+  //   alert(`hello ${name}`)
+
+  // }
   const testFunction = (name) => {
-    alert(`hello ${name}`)
+    const setNewData = {
+      id: todoList.length + 1,
+      name: name
+    }
+
+    setToDoList([...todoList, setNewData])
 
   }
 
@@ -16,15 +25,17 @@ const App = () => {
     { id: 1, name: '123' },
     { id: 2, name: '12213' },
   ])
+
+
   return (
     <>
       <div className="todo-container">
         <div className="todo-title">Todo List </div>
         <TodoInput
-
+          testFunction={testFunction}
         />
         <TodoData
-          testFunction={testFunction} // props as function
+          // testFunction={testFunction} // props as function
           name={huydoan}
           age={age}
           todoList={todoList}

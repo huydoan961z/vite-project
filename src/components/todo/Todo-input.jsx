@@ -1,14 +1,18 @@
 import { useState } from "react"
 
-const TodoInput = () => {
+const TodoInput = (props) => {
     const input = ''
+    const { testFunction } = props
+
     const handleClick = () => {
-        alert(`fire`)
-        console.log(`check`, valueInput)
+        alert(`Add new ${valueInput}`)
+        testFunction(valueInput)
+
 
     }
     const handleChange = (name) => {
         setValueInput(name)
+
     }
     const [valueInput, setValueInput] = useState(input)
 
