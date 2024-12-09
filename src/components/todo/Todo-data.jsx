@@ -9,9 +9,18 @@ const TodoData = (props) => {
     return (
         <>
             <div className='todo-data'>
-                <div>this is my name {name}</div>
-                <div>this is my age {age}</div>
-                <div>{JSON.stringify(todoList)}</div>
+                {todoList.map((item, index) => {
+                    return (
+                        <>
+                            <div className="todoLIST">
+                                <div>{item.name}</div>
+                                <button>Delete</button>
+                            </div>
+                        </>
+                    )
+                })}
+
+
             </div>
         </>
     )
