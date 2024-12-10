@@ -8,6 +8,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import RegisterPage from './pages/register.jsx';
+import LoginPage from './pages/login.jsx';
+import ProductPage from './pages/product.jsx';
+import UserPage from './pages/user.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,10 +19,20 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/trial",
-    element: <div>Hello trial
-
-    </div>,
+    path: "/register",
+    element: <RegisterPage />
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/product",
+    element: <ProductPage />,
+  },
+  {
+    path: "/user",
+    element: <UserPage />,
   },
 ]);
 
