@@ -10,13 +10,30 @@ import {
 } from "react-router-dom";
 import RegisterPage from './pages/register.jsx';
 import LoginPage from './pages/login.jsx';
-import ProductPage from './pages/product.jsx';
+import BookPage from './pages/book.jsx';
 import UserPage from './pages/user.jsx';
+import "./styles/globall.css"
+import TodoApp from './components/todo/Todo-app.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/todolist",
+    path: "/",
     element: <App />,
+    // errorElement </> for the wrong direction
+    children: [
+      {
+        index: true,
+        element: <TodoApp />
+      },
+      {
+        path: "/product",
+        element: <BookPage />,
+      },
+      {
+        path: "/user",
+        element: <UserPage />,
+      },
+    ]
   },
   {
     path: "/register",
@@ -26,14 +43,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginPage />,
   },
-  {
-    path: "/product",
-    element: <ProductPage />,
-  },
-  {
-    path: "/user",
-    element: <UserPage />,
-  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
