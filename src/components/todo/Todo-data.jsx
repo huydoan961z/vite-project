@@ -5,7 +5,6 @@ const TodoData = (props) => {
         testFunction('hello') // run props as function from dad: app.jsx
     }
 
-    //a
     return (
 
         <>
