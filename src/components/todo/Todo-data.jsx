@@ -16,6 +16,7 @@ const TodoData = (props) => {
                                 <button style={{ cursor: 'pointer' }} onClick={() => deleteList(item.id)}>Delete</button>
                             </div>
 
+
                         </>
                     )
                 })}
