@@ -25,6 +25,7 @@ export default [{
       react: {
         version: '18.3'
       }
+
     },
     plugins: {
       react,
