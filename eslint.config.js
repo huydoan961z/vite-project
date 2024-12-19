@@ -20,10 +20,6 @@ export default [{
         sourceType: 'module',
       },
 
-
-
-
-
     },
     settings: {
       react: {
